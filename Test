@@ -1,0 +1,13 @@
+import matplotlib.pyplot as plt
+import random
+
+# Generate random data
+categories = ['Category A', 'Category B', 'Category C', 'Category D']
+data = [random.randint(1, 100) for _ in categories]
+
+# Create a pie chart
+plt.figure(figsize=(8, 8))
+plt.pie(data, labels=categories, autopct='%1.1f%%', startangle=140)
+plt.title("Random Data Pie Chart")
+plt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+plt.show()
